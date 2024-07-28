@@ -1,0 +1,25 @@
+.search {
+    padding: 10px;
+}
+
+.res-conatiner {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    margin: 30px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgb(239, 231, 231);
+}
+.filter-btn:hover{
+    background-color: #0e0c0c;
+    color: #333;
+    border-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

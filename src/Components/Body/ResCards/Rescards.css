@@ -1,0 +1,41 @@
+.res-card {
+    width: 200px;
+    background-color: rgba(231, 227, 227, 0.8);
+    /* Adjust the alpha value (0.8 in this case) to control transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgb(239, 231, 231);
+    font-family: 'Zcool QingKe HuangYou', sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    color: rgb(99, 94, 94);
+}
+
+.res-card:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: rgb(249, 249, 249);
+    color: rgb(107, 103, 103);
+
+}
+
+.res-img {
+    width: 190px;
+    padding: 5px;
+}
+
+.order-btn {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgb(239, 231, 231);
+    color: rgb(107, 103, 103);
+}
+
+.order-btn:hover {
+    background-color: white;
+    color: black;
+}
