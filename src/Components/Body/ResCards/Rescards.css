@@ -1,7 +1,6 @@
 .res-card {
     width: 200px;
     background-color: rgba(231, 227, 227, 0.8);
-    /* Adjust the alpha value (0.8 in this case) to control transparency */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -37,5 +36,9 @@
 
 .order-btn:hover {
     background-color: white;
-    color: black;
+    color: #fc8019;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition: 0.5s;
+
 }

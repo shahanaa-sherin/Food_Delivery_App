@@ -5,9 +5,12 @@
 
 body {
   font-family: 'proxima-nova', Arial, Helvetica Neue, sans-serif;
+  padding-top: 110px;
+  
 }
 .header {
   display: flex;
+  height: 90px;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -18,13 +21,18 @@ body {
   background-color: white;
   z-index: 1000;
 }
-
+.logo-container{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 .logo {
   width: 120px;
+  background: none;
 }
 .logo:hover{
   transform: scale(1.1);
-  transition: 0.5s;
+  transition: 0.7s;
   cursor: pointer;
 }
 @media (max-width: 768px) {
@@ -32,23 +40,30 @@ body {
     width: 80px;
   }
 }
-
+.logo-text{
+  color: rgb(120, 115, 115);
+  padding: 5px;
+  text-decoration: underline 2px;
+  font-size: 15px;
+}
+.logo-text:hover{
+  color: #fc8019;
+}
 .nav-items>ul {
   display: flex;
   list-style: none;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .nav-items>ul>li {
   font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
   padding: 10px;
   margin: 10px;
+  cursor: pointer;
   color: rgb(120, 115, 115);
+  transition: 0.5s;
 }
 .nav-items>ul>li:hover {
-  font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
-  padding: 10px;
-  margin: 10px;
   color: #fc8019;
 }
 @media (max-width: 768px) {
@@ -59,4 +74,18 @@ body {
   .nav-items>ul {
     font-size: 18px;
   }
+}
+.login-btn{
+    padding: 10px 12px;
+    border: none;
+    background-color: #fc8019;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.login-btn:hover{
+  background-color: #ffffff;
+  color: #fc8019;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

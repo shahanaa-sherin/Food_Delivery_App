@@ -1,4 +1,4 @@
-export const resList = [
+export let resList2 = [
   {
     id: "750591",
     rating:4.2,
@@ -64,7 +64,7 @@ export const resList = [
   },
   
   {
-    id: "750591",
+    id: "7505911",
     rating:2.4,
     imageId:
       "https://imgs.search.brave.com/cGBh_UDKGcBySVZVt4XVojAS8rcfKq9pq2jktxfxoh8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTc5/MDg1NDk0L3Bob3Rv/L2luZGlhbi1iaXJ5/YW5pLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1WSkFVZml1/YXZGWUI3UFh3aXN2/VWhMcVdGSjIwLTlt/MDg3LWN6VUpwOUZz/PQ",
@@ -85,7 +85,7 @@ export const resList = [
     description: "Biryani",
   },
   {
-    id: "750591",
+    id: "750597",
     rating:4.2,
     imageId:
       "https://imgs.search.brave.com/in0eb0RYpNsxPAOTh295EIjQB9TLB2vrx8ei5PY-Q5E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9saDMu/Z29vZ2xldXNlcmNv/bnRlbnQuY29tL3Rp/bWRtazN3NndQdGx3/a0pCeGg0LXY2Tk1Q/eE1HT3dZOUROT3Yy/MUhkX2hNM0dPeVZa/eXg4MndPTDNub2cy/MlRaVFA5UzNDci1q/OThkTEZ2YngtWUtL/dGprN289dzM2MC1y/dw",
@@ -106,7 +106,7 @@ export const resList = [
     description: "kuzhimandhi",
   },
   {
-    id: "1256901",
+    id: "1256921",
     rating:4.4,
     imageId:
       "https://imgs.search.brave.com/mVzXEzWyXA_8ncfKoQGXfmvt_G7KD9O_aB9sCaDdcGs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/b25tYW5vcmFtYS5j/b20vY29udGVudC9k/YW0vbW0vZW4vZm9v/ZC9yZWFkZXJzLXJl/Y2lwZS9pbWFnZXMv/MjAyMC8xMC82L3Bv/dGhpY2hvcnUuanBn/LnRyYW5zZm9ybS81/NzZ4MzAwL2ltYWdl/LmpwZw",
@@ -126,7 +126,7 @@ export const resList = [
     description: "Pothichoru",
   },
   {
-    id: "750579",
+    id: "75057911",
     rating:3.4,
     imageId:
       "https://imgs.search.brave.com/ild7m0464EarDAuB-CwrV8FMmMNK19JIYjp227f8wkE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ1/OTcxNTc5OS9waG90/by9waXp6YS13aXRo/LWhhbS1hbmQtY2hl/ZXNlLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1ncFJNVmZx/eTQ0YWc0VGtyb1Q4/V0VlclJvdGxmS2hl/WlF1NmtRa2RobnhR/PQ",
@@ -148,7 +148,7 @@ export const resList = [
     description: "Pizzas",
   },
   {
-    id: "750248",
+    id: "75024891",
     rating:4.0,
     imageId:
       "https://imgs.search.brave.com/LfbxRfz0zq6zlYf-CLufDmkIkxXHP7CV3azet8sMJ4E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA3LzkwLzcwLzg1/LzM2MF9GXzc5MDcw/ODU0M18wdmRKMWtY/TUN0Y1ZOUDJOdmo4/MXBTemYzMGFKeXJ3/ai5qcGc",
@@ -169,7 +169,7 @@ export const resList = [
     description: "Shawarma",
   },
   {
-    id: "750591",
+    id: "75059120",
     rating:2.4,
     imageId:
       "https://imgs.search.brave.com/cGBh_UDKGcBySVZVt4XVojAS8rcfKq9pq2jktxfxoh8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTc5/MDg1NDk0L3Bob3Rv/L2luZGlhbi1iaXJ5/YW5pLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1WSkFVZml1/YXZGWUI3UFh3aXN2/VWhMcVdGSjIwLTlt/MDg3LWN6VUpwOUZz/PQ",
