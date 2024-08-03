@@ -1,38 +1,54 @@
+.body{
+    padding: 0 40px;
+}
+
 .res-card {
-    width: 200px;
-    background-color: rgba(231, 227, 227, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 3px solid rgb(239, 231, 231);
-    font-family: 'Zcool QingKe HuangYou', sans-serif;
-    font-weight: 100;
-    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Adjust content spacing */
+    align-items: center; /* Center-align items */
+    width: 18%;
+    font-size: 12px;
     color: rgb(99, 94, 94);
+    overflow: hidden;
+    padding: 8px; 
+    cursor: pointer;
 }
 
 .res-card:hover {
     transform: scale(1.1);
     transition: 0.5s;
-    cursor: pointer;
-    background-color: rgb(249, 249, 249);
+    background-color: rgb(255, 255, 255);
     color: rgb(107, 103, 103);
 
 }
 
 .res-img {
-    width: 190px;
-    padding: 5px;
+    width:100%;
+    height: 150px;
+    border-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 15px;
+    object-fit: cover;
 }
-
+.res-card h2, .res-card h4, .res-card h6 {
+    margin:4px 0; /* Remove default margins */
+    padding: 0; 
+    text-align: center;
+}  
 .order-btn {
-    cursor: pointer;
-    padding: 8px;
+    display: block;
+    width: auto; /* Adjust width considering padding or border if needed */
+    /* margin: 8px auto;  */
+     padding: 5px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 3px solid rgb(239, 231, 231);
     color: rgb(107, 103, 103);
+    margin-top: auto;
 }
+
 
 .order-btn:hover {
     background-color: white;
@@ -41,4 +57,5 @@
     transform: scale(1);
     transition: 0.5s;
 
-}
+
+} 

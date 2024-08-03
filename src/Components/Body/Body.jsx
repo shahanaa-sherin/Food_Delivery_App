@@ -1,29 +1,39 @@
 import Rescards from "./ResCards/Rescards";
 import "./Body.css";
-import { resList2 } from "../../Utils/MockData";
 import { useEffect, useState } from "react";
 import Shimmer from "../Shimmer/Shimmer";
 
 function Body() {
-  const [resList, setresList] = useState([]);
+  const [filteredList, setfilteredList] = useState([]);
+  const [originalList, setOriginalList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchText, setSearchText] = useState("");
 
   const handleFilter = () => {
-    setresList(resList.filter((res) => res.rating >= 4));
+    setfilteredList(originalList.filter((res) => res.rating >= 4));
   };
 
   const fetchData = async () => {
     try {
-      // Simulate a delay to mimic fetching data
-      setTimeout(() => {
-        const json = resList2;
-        setresList(json);
-        setLoading(false); // Set loading to false once data is set
-      }, 1000);
+      const response = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.7867303&lng=76.6547932&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTI"
+      );
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const json = await response.json();
+      console.log(json);
+      // Adjust the structure based on the actual response data
+      const restaurants =
+        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
+      console.log(restaurants);
+      setOriginalList(restaurants);
+      setfilteredList(restaurants);
+      setLoading(false);
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
-      setLoading(false); // Ensure loading state is updated even if there's an error
+      setLoading(false);
     }
   };
 
@@ -31,11 +41,16 @@ function Body() {
     fetchData();
   }, []);
 
-  // Render Shimmer if loading, otherwise render the actual content
+  const handleSearch = () => {
+    const filteredFoods = originalList.filter((res) =>
+      res.description.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setfilteredList(filteredFoods);
+  };
+
   return loading ? (
     <Shimmer />
   ) : (
-    // return (
     <>
       <div className="body">
         <div className="filter">
@@ -47,37 +62,22 @@ function Body() {
               onChange={(e) => setSearchText(e.target.value)}
               placeholder="Search for Foods"
             />
-            <button
-              className="srch-button"
-              onClick={() => {
-                console.log(searchText);
-                const filteredFoods  = resList.filter((res) => {
-                  return res.description.toLowerCase().includes(searchText.toLowerCase());
-                });
-                setresList(filteredFoods);
-              }}
-            >
+            <button className="srch-button" onClick={handleSearch}>
               Search
             </button>
           </div>
-          <button
-            className="filter-btn"
-            onClick={() => {
-              handleFilter();
-            }}
-          >
-            Top Rated Resturants
+          <button className="filter-btn" onClick={handleFilter}>
+            Top Rated Restaurants
           </button>
         </div>
         <div className="res-container">
-          {resList.map((restaurant) => (
-            <Rescards key={restaurant.id} resData={restaurant} />
+          {filteredList.map((restaurant) => (
+            <Rescards key={restaurant.info.id} resData={restaurant} />
           ))}
         </div>
       </div>
     </>
   );
-  // );
 }
 
 export default Body;
