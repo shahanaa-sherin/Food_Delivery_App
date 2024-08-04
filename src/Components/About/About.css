@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.abt-container{
+    margin: 100px;
+    padding: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+.abt-container:hover{
+    color: #fc8019;
+    transition: 0.5s;
+    transform: scale(1.1);
+    
+}
