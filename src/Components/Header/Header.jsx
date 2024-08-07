@@ -3,6 +3,7 @@ import { LOGO_URL } from "../../Utils/Constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { faCartArrowDown} from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 function Header() {
   const [btnName, setbtnName] = useState("Sign In");
   return (
@@ -14,10 +15,11 @@ function Header() {
         </div>
         <div className="nav-items">
           <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li> 
             <li>
+              <Link to="/cart"></Link>
               {"  "}
               <FontAwesomeIcon icon={faCartArrowDown} />
               Cart
