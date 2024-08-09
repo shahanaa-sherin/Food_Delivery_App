@@ -12,9 +12,9 @@ function Rescards(props) {
           src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId} // Use the constructed image URL
           alt="restaurant"
         />
-        <h2>{name}</h2>{" "}
-        <h4>{cuisines.join(", ")}</h4>
-        <h6>{avgRating} stars</h6>{" "}
+        <h2 className="res-name">{name}</h2>{" "}
+        <h4 className="res-name">{cuisines.join(", ")}</h4>
+        <h5 className="res-name">{avgRating} stars</h5>{" "}
         {/* Changed from rating to avgRating */}
         {/* <a href={cta.link} target="_blank" rel="noopener noreferrer"> */}
           <button className="order-btn">Order now</button>

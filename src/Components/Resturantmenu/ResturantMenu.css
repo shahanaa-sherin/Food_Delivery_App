@@ -1,0 +1,6 @@
+.menu-container{
+    text-decoration: none !important;
+    color: inherit;
+    border: none; /* Remove any default borders */
+    background: none;
+}

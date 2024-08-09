@@ -2,6 +2,7 @@ import Rescards from "./ResCards/Rescards";
 import "./Body.css";
 import { useEffect, useState } from "react";
 import Shimmer from "../Shimmer/Shimmer";
+import { Link } from "react-router-dom";
 
 function Body() {
   const [filteredList, setfilteredList] = useState([]);
@@ -100,9 +101,17 @@ function Body() {
           </button>
         </div>
         <div className="res-container">
-          {filteredList.map((restaurant) => (
-            <Rescards key={restaurant.info.id} resData={restaurant} />
-          ))}
+          {filteredList.map((restaurant) => {
+            const id = restaurant?.info?.id; // Safely access id
+            if (id) {
+              return (
+                <Link key={id} to={"/restaurant/" + id}>
+                  <Rescards resData={restaurant} />
+                </Link>
+              );
+            }
+            return null; // Or display a fallback UI if needed
+          })}
         </div>
       </div>
     </>

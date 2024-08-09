@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: space-between; /* Adjust content spacing */
     align-items: center; /* Center-align items */
-    width: 18%;
+    width: 100%;
     font-size: 12px;
     color: rgb(99, 94, 94);
     overflow: hidden;
@@ -24,7 +24,7 @@
 }
 
 .res-img {
-    width:100%;
+    width:70%;
     height: 150px;
     border-style: none;
     margin: 0;
@@ -56,6 +56,11 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1);
     transition: 0.5s;
-
-
 } 
+
+.res-name{
+    text-decoration: none !important;
+    color: inherit;
+    border: none; /* Remove any default borders */
+    background: none;
+}

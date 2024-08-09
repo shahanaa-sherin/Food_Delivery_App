@@ -62,9 +62,12 @@ body {
   cursor: pointer;
   color: rgb(120, 115, 115);
   transition: 0.5s;
+  
 }
+
 .nav-items>ul>li:hover {
   color: #fc8019;
+
 }
 @media (max-width: 768px) {
   .header {
