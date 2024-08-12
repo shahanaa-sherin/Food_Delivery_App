@@ -1,23 +1,66 @@
-*{
+/* AboutPage.css */
+.about-page {
+    font-family: 'Proxima Nova', Arial, Helvetica Neue, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.abt-container{
-    margin: 100px;
-    padding: 100px;
+  }
+  
+  .about-header {
+    background-color: #fc8019;
+    color: white;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    cursor: pointer;
-}
-.abt-container:hover{
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .about-header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-content h2 {
     color: #fc8019;
-    transition: 0.5s;
-    transform: scale(1.1);
-    
-}
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .about-content p {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .about-content ul li {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .about-footer {
+    background-color: #fc8019;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+  }
+  
