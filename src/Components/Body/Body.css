@@ -1,4 +1,11 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
 .res-container {
     display: flex;
     justify-content: space-evenly;

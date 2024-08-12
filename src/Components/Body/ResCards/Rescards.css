@@ -58,9 +58,5 @@
     transition: 0.5s;
 } 
 
-.res-name{
-    text-decoration: none !important;
-    color: inherit;
-    border: none; /* Remove any default borders */
-    background: none;
-}
+
+
