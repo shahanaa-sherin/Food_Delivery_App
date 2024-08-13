@@ -1,70 +1,46 @@
-// src/ContactPage.js
-import { useState } from 'react';
-import './Contact.css';
-
+import { useEffect } from "react";
+import "./Contact.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
 const Contact = () => {
-  // State to manage form input
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  // Handle input changes
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
     });
-  };
-
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Your message has been sent!');
-  };
-
+  }, []);
   return (
-    <div className="contact-page">
-      <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+    <div className="contact-container">
+      <div className="contact-header">
+        <h1 className="contact-heading">Contact Us</h1>
+       <div className="hr"></div>
+      </div>
+      <div className="contact-info" data-aos="fade-right">
+        <p>Feel free to reach out to us!</p>
+        <div className="info-item">
+          <i className="fas fa-map-marker-alt"></i> 1234 Street Name, City,
+          Country
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+        <div className="info-item">
+          <i className="fas fa-phone-alt"></i> +123 456 7890
         </div>
-        <div className="form-group">
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
+        <div className="info-item">
+          <i className="fas fa-envelope"></i> info@yourcompany.com
         </div>
-        <button className='contact-btn' type="submit">Send</button>
-      </form>
+        <div className="social-icons">
+          <a href="#">
+            <i className="fab fa-facebook-f"></i>
+          </a>
+          <a href="#">
+            <i className="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i className="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+
     </div>
   );
 };

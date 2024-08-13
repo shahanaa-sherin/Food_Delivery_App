@@ -1,12 +1,21 @@
+import { useEffect } from 'react';
 import  './About.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AboutPage = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
   return (
+
     <div className="about-page">
-      <header className="about-header">
+      <header className="about-header" data-aos="fade-right">
         <h1>About Us</h1>
       </header>
-      <section className="about-content">
+      <section className="about-content" data-aos="fade-left">
         <h2>Our Mission</h2>
         <p>
           At FoodieDelight, our mission is to bring you the best culinary experiences from your favorite local restaurants right to your doorsteps. We are committed to providing quick, reliable, and top-quality food delivery services to make your dining experiences enjoyable and hassle-free.
@@ -23,7 +32,7 @@ const AboutPage = () => {
           <li>Innovation: We embrace technology to provide you with the best user experience.</li>
         </ul>
       </section>
-      <footer className="about-footer">
+      <footer className="about-footer"data-aos="slide-up">
         <p>© 2024 FoodieDelight. All rights reserved.</p>
       </footer>
     </div>

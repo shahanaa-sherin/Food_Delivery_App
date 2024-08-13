@@ -1,60 +1,70 @@
-.contact-page {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-page h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 2rem;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .form-group textarea {
-    height: 150px;
-    resize: vertical;
-  }
-  
-  .contact-btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
+.contact-container {
+  padding: 50px;
+  background: linear-gradient(to right, #f9f9f9, #ffffff);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+.contact-heading{
+  color: #222222;
+  font-family: "Gilroy", sans-serif;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 100px;
+  margin: 0 auto;
+}
+.hr{
+  border-top: 3px solid #d9d5d5;
+  border-radius: 10px;
+}
+.contact-info {
+  width: 45%;
+  padding: 100px;
+}
+
+.contact-form {
+  width: 45%;
+}
+
+.input-field {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submit-btn {
+  padding: 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+
+.info-item {
+  margin: 10px 0;
+}
+
+.social-icons a {
+  margin-top: 10px;
+  margin: 0 10px;
+  color: #fc8019;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+}
