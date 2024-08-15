@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import  './About.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Users from './Users/Users';
 
 const AboutPage = () => {
   useEffect(() => {
@@ -32,7 +33,8 @@ const AboutPage = () => {
           <li>Innovation: We embrace technology to provide you with the best user experience.</li>
         </ul>
       </section>
-      <footer className="about-footer"data-aos="slide-up">
+      <Users />
+      <footer className="about-footer">
         <p>© 2024 FoodieDelight. All rights reserved.</p>
       </footer>
     </div>

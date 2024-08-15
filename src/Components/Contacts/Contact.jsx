@@ -13,11 +13,11 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-header">
-        <h1 className="contact-heading">Contact Us</h1>
+        <h1 className="contact-heading"data-aos="fade-right" >Contact Us</h1>
        <div className="hr"></div>
       </div>
-      <div className="contact-info" data-aos="fade-right">
-        <p>Feel free to reach out to us!</p>
+      <div className="contact-info" data-aos="slide-up">
+        <h1>Feel free to reach out to us!</h1>
         <div className="info-item">
           <i className="fas fa-map-marker-alt"></i> 1234 Street Name, City,
           Country

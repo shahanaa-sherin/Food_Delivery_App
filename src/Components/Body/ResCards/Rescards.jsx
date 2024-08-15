@@ -12,7 +12,7 @@ function Rescards(props) {
           src={
             "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
             cloudinaryImageId
-          } // Use the constructed image URL
+          }
           alt="restaurant"
         />
         <h2 >{name}</h2>{" "}
