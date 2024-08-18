@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import {useEffect } from 'react';
 import  './About.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -10,6 +10,7 @@ const AboutPage = () => {
       duration: 2000,
     });
   }, []);
+
   return (
 
     <div className="about-page">
@@ -33,7 +34,7 @@ const AboutPage = () => {
           <li>Innovation: We embrace technology to provide you with the best user experience.</li>
         </ul>
       </section>
-      <Users />
+      <Users name ={"Developers"}/>
       <footer className="about-footer">
         <p>© 2024 FoodieDelight. All rights reserved.</p>
       </footer>
