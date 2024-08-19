@@ -9,6 +9,15 @@ const AboutPage = () => {
     AOS.init({
       duration: 2000,
     });
+   const timer =  setInterval(()=>{
+      console.log("hey.....");
+      
+    },1000)
+    return () => {
+      clearInterval(timer);
+      console.log("component will unmount");
+      
+    }
   }, []);
 
   return (

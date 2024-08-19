@@ -5,7 +5,7 @@ import Shimmer from "../Shimmer/Shimmer";
 import { Link } from "react-router-dom";
 
 function Body() {
-  const [filteredList, setfilteredList] = useState([]);
+  const [filteredList, setFilteredList] = useState([]);
   const [originalList, setOriginalList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchText, setSearchText] = useState("");
@@ -13,7 +13,7 @@ function Body() {
   const [hasMore, setHasMore] = useState(true);
 
   const handleFilter = () => {
-    setfilteredList(originalList.filter((res) => res.rating >= 4));
+    setFilteredList(originalList.filter((res) => res.rating >= 4));
   };
 
   const fetchData = async (page) => {
@@ -34,8 +34,14 @@ function Body() {
       if (restaurants.length === 0) {
         setHasMore(false); // No more data available
       } else {
-        setOriginalList((prev) => [...prev, ...restaurants]);
-        setfilteredList((prev) => [...prev, ...restaurants]);
+        // Filter out restaurants that already exist in the list to avoid duplicates
+        const newRestaurants = restaurants.filter(
+          (restaurant) =>
+            !originalList.some((res) => res.info.id === restaurant.info.id)
+        );
+
+        setOriginalList((prev) => [...prev, ...newRestaurants]);
+        setFilteredList((prev) => [...prev, ...newRestaurants]);
       }
 
       setLoading(false);
@@ -56,11 +62,7 @@ function Body() {
         document.documentElement.scrollHeight
       ) {
         if (hasMore && !loading) {
-          setPage((prevPage) => {
-            const newPage = prevPage + 1;
-            fetchData(newPage);
-            return newPage;
-          });
+          setPage((prevPage) => prevPage + 1);
         }
       }
     };
@@ -75,7 +77,7 @@ function Body() {
     const filteredFoods = originalList.filter((res) =>
       res.description.toLowerCase().includes(searchText.toLowerCase())
     );
-    setfilteredList(filteredFoods);
+    setFilteredList(filteredFoods);
   };
 
   return loading ? (
@@ -101,11 +103,11 @@ function Body() {
           </button>
         </div>
         <div className="res-container">
-          {filteredList.map((restaurant) => {
+          {filteredList.map((restaurant, index) => {
             const id = restaurant?.info?.id; // Safely access id
             if (id) {
               return (
-                <Link key={id} to={"/restaurant/" + id}>
+                <Link key={`${id}-${index}`} to={"/restaurant/" + id}>
                   <Rescards resData={restaurant} />
                 </Link>
               );

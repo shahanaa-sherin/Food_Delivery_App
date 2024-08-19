@@ -25,14 +25,15 @@ const appRouter = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
-    {
-      path:"/resturant/:resid",
-      element:<ResturantMenu />
-    }
+      {
+        path: "/restaurant/:resid",  // Correct the typo here
+        element: <ResturantMenu />,
+      }
     ],
     errorElement: <ErrorPage />,
   },
 ]);
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

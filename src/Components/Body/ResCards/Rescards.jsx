@@ -1,8 +1,9 @@
 import "../ResCards/Rescards.css";
+import PropTypes from "prop-types";
 
 function Rescards(props) {
   const { resData } = props;
-  const { name, avgRating, cuisines, cloudinaryImageId } = resData?.info;
+  const { name, avgRating, cuisines, cloudinaryImageId } = resData.info;
 
   return (
     <>
@@ -15,13 +16,25 @@ function Rescards(props) {
           }
           alt="restaurant"
         />
-        <h2 >{name}</h2>{" "}
-        <h4 >{cuisines.join(", ")}</h4>
-        <h5>{avgRating} stars</h5>{" "}
+        <h2>{name}</h2>
+        <h4>{cuisines.join(", ")}</h4>
+        <h5>{avgRating} stars</h5>
         <button className="order-btn">Order now</button>
       </div>
     </>
   );
 }
+
+// PropTypes validation
+Rescards.propTypes = {
+  resData: PropTypes.shape({
+    info: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      avgRating: PropTypes.number.isRequired,
+      cuisines: PropTypes.arrayOf(PropTypes.string).isRequired,
+      cloudinaryImageId: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 
 export default Rescards;
