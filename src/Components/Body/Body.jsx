@@ -1,6 +1,6 @@
 import Rescards from "./ResCards/Rescards";
 import "./Body.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import Shimmer from "../Shimmer/Shimmer";
 import { Link } from "react-router-dom";
 
@@ -79,7 +79,7 @@ function Body() {
     );
     setFilteredList(filteredFoods);
   };
-
+  
   return loading ? (
     <Shimmer />
   ) : (
@@ -104,7 +104,7 @@ function Body() {
         </div>
         <div className="res-container">
           {filteredList.map((restaurant, index) => {
-            const id = restaurant?.info?.id; // Safely access id
+            const id = restaurant?.info?.id; 
             if (id) {
               return (
                 <Link key={`${id}-${index}`} to={"/restaurant/" + id}>
@@ -112,7 +112,7 @@ function Body() {
                 </Link>
               );
             }
-            return null; // Or display a fallback UI if needed
+            return null; 
           })}
         </div>
       </div>

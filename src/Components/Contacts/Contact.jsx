@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "./Contact.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import '@fortawesome/fontawesome-free/css/all.min.css'
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Contact = () => {
   useEffect(() => {
@@ -13,20 +13,22 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-header">
-        <h1 className="contact-heading"data-aos="fade-right" >Contact Us</h1>
-       <div className="hr"></div>
+        <h1 className="contact-heading" data-aos="fade-right">
+          Contact Us
+        </h1>
+        <div className="hr"></div>
       </div>
       <div className="contact-info" data-aos="slide-up">
         <h1>Feel free to reach out to us!</h1>
         <div className="info-item">
-          <i className="fas fa-map-marker-alt"></i> 1234 Street Name, City,
+          <i className="fas fa-map-marker-alt"></i>1234 Street Name, City,
           Country
         </div>
         <div className="info-item">
-          <i className="fas fa-phone-alt"></i> +123 456 7890
+          <i className="fas fa-phone-alt"></i>+123 456 7890
         </div>
         <div className="info-item">
-          <i className="fas fa-envelope"></i> info@yourcompany.com
+          <i className="fas fa-envelope"></i>info@yourcompany.com
         </div>
         <div className="social-icons">
           <a href="#">
@@ -40,7 +42,6 @@ const Contact = () => {
           </a>
         </div>
       </div>
-
     </div>
   );
 };

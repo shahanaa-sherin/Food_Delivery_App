@@ -24,8 +24,6 @@ function Rescards(props) {
     </>
   );
 }
-
-// PropTypes validation
 Rescards.propTypes = {
   resData: PropTypes.shape({
     info: PropTypes.shape({
