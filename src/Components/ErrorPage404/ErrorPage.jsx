@@ -1,5 +1,6 @@
 import { useRouteError } from "react-router-dom";
 import "./ErrorPage.css";
+import Errpage from "../../assets/Images/something-lost.webp";
 
 const ErrorPage = () => {
   const err = useRouteError();
@@ -8,9 +9,8 @@ const ErrorPage = () => {
   return (
     <>
       <div className="err-container">
-        <h1 className="err"> {err.status}</h1>
-        <h2>Oops, the page you are looking for does not exist.</h2>
-        <h3>{err.statusText || err.message}</h3>
+        <img src={Errpage} alt="" className="err-img"/>
+        <h2 className="err-msg">Oops, the page you are looking for does not exist.</h2>
       </div>
     </>
   );

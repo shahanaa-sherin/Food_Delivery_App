@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import UseOnlineStatus from "../../Utils/UseOnlineStatus";
 function Header() {
+  const onlineStatus = UseOnlineStatus()
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
@@ -20,6 +22,9 @@ function Header() {
         </div>
         <div className="nav-items">
           <ul>
+            <li>
+              OnlineStatus:{onlineStatus?"Online":"Offline"}
+            </li>
             <li>
               <Link to="/">Home</Link>
             </li>
