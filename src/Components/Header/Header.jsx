@@ -35,6 +35,9 @@ function Header() {
               <Link to="/contact">Contact</Link>
             </li>
             <li>
+              <Link to="/grocery">Grocery</Link>
+            </li>
+            <li>
               <Link to="/cart"></Link>
               {"  "}
               <FontAwesomeIcon icon={faCartArrowDown} />
